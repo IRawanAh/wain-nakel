@@ -1,25 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import axios from 'axios';
 class App extends Component {
+  getPlace = () => {
+    let url = "https://wainnakel.com/api/v1/GenerateFS.php?uid=26.2716025,50.2017993&get_param=value";
+    axios({
+      method: 'get',
+      mode: "cors",
+      url: url,
+      credentials: "include",
+      headers: {
+        "Content-type": "application/json",
+        'Access-Control-Allow-Origin': '*',
+      }
+    }
+    ).then(response => {
+      console.log(response.data)
+    })
+      .catch(error => console.log(error));
+  };
+
+
   render() {
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <button onClick={this.getPlace}>Suggest</button>
+        <h1></h1>
       </div>
     );
   }
