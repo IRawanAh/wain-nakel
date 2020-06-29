@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/wain-nakel/precache-manifest.9909d11325f478f304fddba748e4ad9a.js"
+  "/wain-nakel/precache-manifest.ae1a00860b3eb1d365db2717b4cc632c.js"
 );
 
 workbox.clientsClaim();
