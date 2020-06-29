@@ -34,7 +34,7 @@ class Suggestion extends Component {
         this.setState({ loadingButton: true });
 
         axios({
-            url: "https://cors.io/?https://wainnakel.com/api/v1/GenerateFS.php?uid=26.2716025,50.2017993&get_param=value"
+            url: "https://wainnakel.com/api/v1/GenerateFS.php?uid=26.2716025,50.2017993&get_param=value"
         }).then(res => {
 
             this.setState({ data: res.data });
